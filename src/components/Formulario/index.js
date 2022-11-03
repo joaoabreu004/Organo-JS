@@ -6,14 +6,14 @@ import Botao from '../Botao';
 
 const Formulario = (props) => {
 
-    const times = [
-        'Programação', 
-        'Front-end', 
-        'Data Science', 
-        'DevOps', 
-        'Mobile', 
-        'Inovação e Gestão'
-    ]
+    // const times = [
+    //     'Programação', 
+    //     'Front-end', 
+    //     'Data Science', 
+    //     'DevOps', 
+    //     'Mobile', 
+    //     'Inovação e Gestão'
+    // ]
 
 
     //VARÍÁVEIS QUE POSSO PEGAR ESSES VALORES E TRABALHAR COM ELES 
@@ -33,7 +33,10 @@ const Formulario = (props) => {
             cargo: cargo, 
             imagem: imagem,
             time: time
-        })
+        }); 
+        setNome('');
+        setCargo('');
+        setImage('');
     }
 
     return (
@@ -61,7 +64,7 @@ const Formulario = (props) => {
                 />
                 <ListaSuspensa 
                     label="Time" 
-                    itens={times} 
+                    itens={props.nomeDosTimes} 
                     valor={time}
                     aoAlterado={valor => setTime(valor)}/>
                 <Botao>
