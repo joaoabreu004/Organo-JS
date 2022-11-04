@@ -21,7 +21,7 @@ const Formulario = (props) => {
     const [nome, setNome] = useState(''); 
     const [cargo, setCargo] = useState(''); 
     const [imagem, setImage] = useState(''); 
-    const [time, setTime] = useState('Programação'); 
+    const [time, setTime] = useState(''); 
 
 
 

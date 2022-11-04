@@ -6,7 +6,8 @@ const ListaSuspensa = (props) => {
     return(
         <div className='lista-suspensa'>
             <label>{props.label}</label>
-            <select onChange={e => props.aoAlterado(e.target.value)} required={props.required} value={props.value}>
+            <select onChange={e => props.aoAlterado(e.target.value)} required={props.required} value={props.valOR}>
+                <option value=""></option>
                 {props.itens.map(item => {   
                     return <option key={item}>{item}</option>; 
                 })}
