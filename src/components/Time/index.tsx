@@ -1,7 +1,16 @@
+import { IColaborador } from '../../shared/interfaces/IColaborador';
 import Colaborador from '../Colaborador';
 import './Time.css';
 
-const Time = (props) => {
+
+interface TimeProps{
+    corPrimaria: string; 
+    corSecundaria: string;
+    nome: string;
+    colaboradores: IColaborador[]
+}
+
+const Time = (props: TimeProps) => {
 
     return (
         //RENDERIZAÇÃO CONDICIONAL
@@ -12,7 +21,7 @@ const Time = (props) => {
                 {props.colaboradores.map(colaborador => <Colaborador  key={colaborador.nome} corDeFundo={props.corPrimaria} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} />)}
             </div>
         </section>
-        : ''
+        : <></> 
     );
 
 }
